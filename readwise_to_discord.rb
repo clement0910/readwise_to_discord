@@ -6,7 +6,7 @@ readwise_token = 'YOUR_READWISE_TOKEN'
 discord_webhook_url = 'YOUR_DISCORD_WEBHOOK_URL'
 
 def last_10_minutes
-  current_time = Time.now.utc
+  current_time = Time.now
   rounded_minutes = current_time.min - current_time.min % 10
   rounded_time = Time.new(current_time.year, current_time.month, current_time.day, current_time.hour, rounded_minutes, 0)
   ten_minutes_before_rounded = rounded_time - 600
